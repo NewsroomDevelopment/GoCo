@@ -16,7 +16,7 @@ $ cd goco-scraping
 
 5. Open up jupyter notebook and change the kernel by going to kernel -> change kernel -> goco.
 
-6. To add dependencies, you can do pipenv install <package-name>. Then, restart the jupyter notebook and do step 4 again. This will make sure the jupyter notebook environment is up to date.
+6. To add dependencies, you can do `pipenv install <package-name>`. Then, restart the jupyter notebook and do step 4 again. This will make sure the jupyter notebook environment is up to date.
 
 ## Usage
 
