@@ -14,6 +14,7 @@ boto3 = "*"
 jupyter = "*"
 beautifulsoup4 = "*"
 dnspython = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
