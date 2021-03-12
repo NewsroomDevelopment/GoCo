@@ -13,6 +13,7 @@ ipykernel = "*"
 boto3 = "*"
 jupyter = "*"
 beautifulsoup4 = "*"
+dnspython = "*"
 
 [requires]
 python_version = "3.8"
