@@ -20,21 +20,21 @@ client = MongoClient(MDB_URI)
 sport_names = ["baseball", "mens-basketball", "cross-country", "fencing", "football", "mens-golf", "heavyweight-rowing","lightweight-rowing", "mens-soccer", "mens-squash", "mens-swimming-and-diving", "track-and-field", "wrestling", "mens-tennis", "womens-basketball", "arch", "field-hockey", "womens-golf", "lacrosse", "womens-rowing", "womens-soccer", "softball", "womens-squash", "womens-swimming-and-diving", "womens-swimming-and-diving", "track-and-field", "womens-volleyball"]
 
 for sport in sport_names:
-    db = client[sport]
+    mydb = client[sport]
 
-    collection = db["team_stats"]
+    collection = mydb["team_stats"]
 
     data = get_team_stats(sport)
 
     collection.insert_one(data)
 
-    collection = db["roster"]
+    collection = mydb["roster"]
 
     data = get_roster_data(sport)
     
     collection.insert_many(data)
     
-    collection = db["schedule"]
+    collection = mydb["schedule"]
 
     data = get_schedule_data(sport)
 
