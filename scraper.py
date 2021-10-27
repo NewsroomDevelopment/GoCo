@@ -20,7 +20,7 @@ client = MongoClient(MDB_URI)
 sport_names = ["baseball", "mens-basketball", "cross-country", "fencing", "football", "mens-golf", "heavyweight-rowing","lightweight-rowing", "mens-soccer", "mens-squash", "mens-swimming-and-diving", "track-and-field", "wrestling", "mens-tennis", "womens-basketball", "arch", "field-hockey", "womens-golf", "lacrosse", "womens-rowing", "womens-soccer", "softball", "womens-squash", "womens-swimming-and-diving", "womens-swimming-and-diving", "track-and-field", "womens-volleyball"]
 
 for sport in sport_names:
-    mydb = client[sport]
+    db = client[sport]
 
     collection = db["team_stats"]
 
