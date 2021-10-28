@@ -17,7 +17,7 @@ MDB_URI = f'mongodb+srv://{MDB_USERNAME}:{MDB_PASSWORD}@goco-scraping.bwqwr.mong
 
 client = MongoClient(MDB_URI)
 
-sport_names = ["baseball", "mens-basketball", "cross-country", "fencing", "football", "mens-golf", "heavyweight-rowing","lightweight-rowing", "mens-soccer", "mens-squash", "mens-swimming-and-diving", "track-and-field", "wrestling", "mens-tennis", "womens-basketball", "arch", "field-hockey", "womens-golf", "lacrosse", "womens-rowing", "womens-soccer", "softball", "womens-squash", "womens-swimming-and-diving", "womens-swimming-and-diving", "track-and-field", "womens-volleyball"]
+sport_names = ["baseball", "mens-basketball", "cross-country", "fencing", "football", "mens-golf", "mens-rowing","lightweight-rowing", "mens-soccer", "mens-squash", "mens-swimming-and-diving", "track-and-field", "wrestling", "mens-tennis", "womens-basketball", "arch", "field-hockey", "womens-golf", "womens-lacrosse", "womens-rowing", "womens-soccer", "softball", "womens-squash", "womens-swimming-and-diving", "womens-swimming-and-diving", "track-and-field", "womens-volleyball"]
 
 for sport in sport_names:
     mydb = client[sport]
