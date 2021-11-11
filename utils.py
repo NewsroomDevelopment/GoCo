@@ -165,9 +165,10 @@ def get_schedule_data(sport, specified_year=None):
 def get_table_headers(table):
     """Given a table soup, returns all the headers"""
     headers = []
-    for row in table.find("thead").find_all("tr"):
-        for th in row.find_all("th"):
-            headers.append(th.text.strip().split("\n")[0])
+    if(table.find("thead")):
+        for row in table.find("thead").find_all("tr"):
+            for th in row.find_all("th"):
+                headers.append(th.text.strip().split("\n")[0])
     return headers
 def get_team_stats(sport, specified_year=None):
     table_captions = []
