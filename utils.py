@@ -22,6 +22,8 @@ def get_profile_soup(sport, name, id):
 def get_athlete_player_fields(soup):
     # find player field section and get field data
     player_fields = soup.find("div", class_="sidearm-roster-player-fields")
+    if player_fields is None:
+        return None
     return player_fields.find_all("li")
 
 def get_athlete_active_years(current_year, soup):
@@ -58,8 +60,9 @@ def get_roster_data(sport, specified_year=None):
                     profile_soup = get_profile_soup(sport, athlete_info['name'], athlete_info['id'])
                     athlete_info["active_years"] = get_athlete_active_years(year, profile_soup)
                     player_fields = get_athlete_player_fields(profile_soup)
-                    for field in player_fields:
-                        athlete_info[field.find("dt").text.lower()] = field.find("dd").text.lower()
+                    if player_fields:
+                        for field in player_fields:
+                            athlete_info[field.find("dt").text.lower()] = field.find("dd").text.lower()
 
                 # add image if avaliable
                 if athlete['image']:
